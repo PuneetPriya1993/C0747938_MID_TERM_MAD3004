@@ -34,5 +34,26 @@ class Order: IDisplay
         
     }
     
+    func getOrderById(orderId: String)
+    {
+        var oid = orderId
+        switch oid
+        {
+        case "O001":
+        
+            print("First Order is: Hard Drive, Zip Drive, Monitor \nTotal of First Order is: ", cal(a:120.000,b: 90.00,c: 300.00))
+            
+        case "O002":
+            print("Second Order is: Monitor, Floppy Disk, Hard Drive \nTotal of Second Order is: ",cal(a: 300.00,b: 50.00, c:120.00))
+            
+        case "O003":
+            print("Third Order is: Hard Drive, Iphone 7 Plus, Floppy Disk \nTotal of Third Order is: ",cal(a: 120.00,b: 1200.00, c: 50.00))
+        
+        default:
+           print("Sorry")
+        }
+      
+    }
     
 }
+

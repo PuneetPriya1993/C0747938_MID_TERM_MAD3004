@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Manufacturer
+ class Manufacturer
 {
     
     var manufacturerId: String

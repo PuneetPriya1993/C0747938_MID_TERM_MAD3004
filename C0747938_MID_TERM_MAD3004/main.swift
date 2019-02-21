@@ -37,11 +37,11 @@ print("-------------------------------------------")
 print()
 print("----- 3 objects of Order Class -----")
 
-var o1 = Order(orderId: "O001", orderDate: Date(), productArray: ["Hard Drive"," Zip Drive"], orderTotal: 2 )
+var o1 = Order(orderId: "O001", orderDate: Date(), productArray: ["Hard Drive"," Zip Drive","Monitor"], orderTotal: 3 )
 
-var o2 = Order(orderId: "O002", orderDate: Date(), productArray: ["Monitor"," Floppy Disk"], orderTotal: 2 )
+var o2 = Order(orderId: "O002", orderDate: Date(), productArray: ["Monitor"," Floppy Disk","Hard Drive"], orderTotal: 3 )
 
-var o3 = Order(orderId: "O003", orderDate: Date(), productArray: ["Hard Drive"," Iphone 7 Plus"], orderTotal: 2 )
+var o3 = Order(orderId: "O003", orderDate: Date(), productArray: ["Hard Drive"," Iphone 7 Plus", "Floppy Disk"], orderTotal: 3 )
 
 o1.display()
 print("-------------------------------------------")
@@ -51,12 +51,46 @@ o3.display()
 print("-------------------------------------------")
 
 
-var dictionary1 = [o1.orderId, o1.productArray] as [Any]
-var dictionary2 = [o2.orderId, o2.productArray] as [Any]
-var dictionary3 = [o3.orderId, o3.productArray] as [Any]
+func cal(a: Double, b: Double, c: Double) -> Double
+{
+    return a + b + c
+    
+}
+o1.getOrderById(orderId: "O001")
+o2.getOrderById(orderId: "O002")
+o3.getOrderById(orderId: "O003")
 
 
-for (key,value) in (o1.orderId, o1.productArray)
+
+for value in o1.productArray
+{
+    print( "print first ordered product values: ", value)
+}
+
+
+for value in o2.productArray
+{
+    print( "print second ordered product values: ", value)
+}
+
+for value in o3.productArray
+{
+    print( "print third ordered product values: ", value)
+}
+//var dictionary2 = [o2.orderId, o2.productArray] as [Any]
+//var dictionary3 = [o3.orderId, o3.productArray] as [Any]
+/*
+for (key: String, value: String) in (o1.orderId, o1.productArray)
 {
     print("key: ", key, "value: ", value)
+}*/
+
+
+/*
+extension add(self)
+{
+    return self + "$"
 }
+*/
+
+

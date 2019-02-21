@@ -35,7 +35,10 @@ class Product: Manufacturer, IDisplay
         super.init(manufacturerId: manufacturerId, manufacturerName: manufacturerName)
     }
     
-    func display()
+           //    add(self.productPrice)
+    
+    
+   func display()
     {
         print("Product Id: ", self.productId)
         print("Product Name: ", self.productName)
@@ -46,6 +49,6 @@ class Product: Manufacturer, IDisplay
         
     }
     
-    
+   
     
 }
